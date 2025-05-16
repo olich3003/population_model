@@ -1,0 +1,45 @@
+{
+  "name": "mutation_rate",
+  "description": "Влияние уровня мутаций на эволюцию параметров популяции",
+  "override": {
+    "simulation.repeats": 30,
+    "simulation.years": 50,
+    "cows.mutation_rate": [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+    "cows.params.group": [
+      {
+        "S": 1,
+        "V": 1,
+        "M": 1,
+        "IQ": 1,
+        "W": 1,
+        "R": 1,
+        "T0": 1
+      },
+      {
+        "S": 5,
+        "V": 5,
+        "M": 5,
+        "IQ": 5,
+        "W": 5,
+        "R": 5,
+        "T0": 5
+      },
+      {
+        "S": 10,
+        "V": 10,
+        "M": 10,
+        "IQ": 10,
+        "W": 10,
+        "R": 10,
+        "T0": 10
+      }
+    ],
+    "cows.birth_energy": 500,
+    "cows.base_energy": 100,
+    "cows.use_intelligence": false,
+    "cows.stomach_size": 6,
+    "eco.grass_speed": 0.1,
+    "eco.max_grass_amount": 100,
+    "cows.sexual_reproduce": 0
+  }
+} 

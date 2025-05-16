@@ -1,0 +1,100 @@
+{
+  "group_by": {
+    "path": "cows.mutation_rate",
+    "column": "mutation_rate"
+  },
+  "experiment_groups": {
+    "group1": {
+      "name": "Слабые параметры (1)",
+      "configs": [1, 2, 3, 4, 5, 6],
+      "mutation_rates": [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    },
+    "group2": {
+      "name": "Средние параметры (5)",
+      "configs": [7, 8, 9, 10, 11, 12],
+      "mutation_rates": [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    },
+    "group3": {
+      "name": "Сильные параметры (10)",
+      "configs": [13, 14, 15, 16, 17, 18],
+      "mutation_rates": [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    }
+  },
+  "plots": [
+    {
+      "metric": "population_size",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Размер популяции",
+      "title": "Динамика популяции в зависимости от скорости мутаций",
+      "output": "population_dynamics_{group}.png",
+      "tick_step": 50,
+      "by_experiment_group": true
+    },
+    {
+      "metric": "avg_energy",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик", 
+      "ylabel": "Средняя энергия",
+      "title": "Средняя энергия коров в зависимости от скорости мутаций",
+      "output": "avg_energy_{group}.png",
+      "tick_step": 50,
+      "exclude_values": [0],
+      "by_experiment_group": true
+    },
+    {
+      "metric": "births",
+      "aggregate": ["mean", "std"],
+      "type": "bar",
+      "use_summary": true,
+      "xlabel": "Уровень мутации",
+      "ylabel": "Количество рождений",
+      "title": "Общее количество рождений в зависимости от уровня мутации",
+      "output": "births_{group}.png",
+      "group_by_order": ["0.0", "0.2", "0.4", "0.6", "0.8", "1.0"],
+      "by_experiment_group": true
+    },
+    {
+      "metric": "genetic_diversity",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Генетическое разнообразие",
+      "title": "Генетическое разнообразие в зависимости от скорости мутаций",
+      "output": "genetic_diversity_{group}.png",
+      "tick_step": 50,
+      "exclude_values": [0],
+      "by_experiment_group": true
+    },
+    {
+      "metric": "avg_death_age",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Средний возраст смерти",
+      "title": "Средний возраст смерти в зависимости от скорости мутаций",
+      "output": "avg_death_age_{group}.png",
+      "tick_step": 50,
+      "by_experiment_group": true
+    },
+    {
+      "metric":  ["avg_S", "avg_V", "avg_M", "avg_W", "avg_R", "avg_T0", "avg_IQ"],
+      "aggregate": ["mean"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Среднее значение параметра",
+      "title": "Динамика параметров в зависимости от скорости мутаций",
+      "output": "parameters_dynamics_{group}.png",
+      "subplot": true,
+      "subplot_params": {
+        "rows": 4,
+        "cols": 2
+      },
+      "tick_step": 50,
+      "exclude_values": [0],
+      "by_experiment_group": true
+    }
+  ]
+} 

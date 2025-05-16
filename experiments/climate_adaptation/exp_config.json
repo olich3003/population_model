@@ -1,0 +1,28 @@
+{
+  "name": "climate_adaptation",
+  "description": "Адаптация коров к разным климатическим зонам",
+  "override": {
+    "simulation.monotonous_mode": true,
+    "simulation.monotonous_zone": ["Polar", "Middle", "Equator"],
+    "simulation.repeats": 3,
+    "simulation.years": 30,
+    "simulation.initial_population": 500,
+    "cows.params": {
+      "S": "random",
+      "V": "random",
+      "M": "random",
+      "IQ": "random",
+      "W": "random",
+      "R": "random",
+      "T0": "random"
+    },
+    "cows.sexual_reproduce": 0,
+    "cows.mutation_rate": 0.2,
+    "cows.birth_energy": 500,
+    "cows.base_energy": 100,
+    "cows.use_intelligence": false,
+    "cows.stomach_size": 6,
+    "eco.grass_speed": 0.1,
+    "eco.max_grass_amount": 100
+  }
+} 

@@ -1,0 +1,25 @@
+{
+  "name": "intelligence_effect",
+  "description": "Влияние интеллекта на выживаемость популяции",
+  "override": {
+    "simulation.repeats": 30,
+    "simulation.years": 50,
+    "cows.IQ": [2, 4, 6, 8, 10],
+    "cows.mutation_rate": 0.2,
+    "cows.use_intelligence": true,
+    "cows.params": {
+      "S": "random",
+      "V": "random",
+      "M": "random",
+      "W": "random",
+      "R": "random",
+      "T0": "random"
+    },
+    "cows.birth_energy": 500,
+    "cows.base_energy": 100,
+    "cows.stomach_size": 6,
+    "eco.grass_speed": 0.1,
+    "eco.max_grass_amount": 100,
+    "cows.sexual_reproduce": 1
+  }
+} 

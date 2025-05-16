@@ -1,0 +1,9 @@
+{
+  "seed": 43,
+  "final_population": 1855,
+  "births": 332815,
+  "deaths": 331460,
+  "deaths_starvation": 315353,
+  "deaths_natural": 16107,
+  "ticks": 20000
+}

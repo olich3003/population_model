@@ -1,0 +1,73 @@
+{
+  "group_by": {
+    "path": "cows.T0",
+    "column": "max_lifespan"
+  },
+  "plots": [
+    {
+      "metric": "population_size",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Размер популяции",
+      "title": "Динамика популяции в зависимости от максимальной продолжительности жизни",
+      "output": "population_dynamics.png",
+      "tick_step": 50
+    },
+    {
+      "metric": "avg_energy",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик", 
+      "ylabel": "Средняя энергия",
+      "title": "Средняя энергия коров в зависимости от максимальной продолжительности жизни",
+      "output": "avg_energy.png",
+      "tick_step": 50
+    },
+    {
+      "metric": "births",
+      "aggregate": ["mean", "std"],
+      "type": "bar",
+      "use_summary": true,
+      "xlabel": "Максимальная продолжительность жизни",
+      "ylabel": "Количество рождений",
+      "title": "Общее количество рождений в зависимости от максимальной продолжительности жизни",
+      "output": "births.png"
+    },
+    {
+      "metric": "genetic_diversity",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Генетическое разнообразие",
+      "title": "Генетическое разнообразие в зависимости от максимальной продолжительности жизни",
+      "output": "genetic_diversity.png",
+      "tick_step": 50
+    },
+    {
+      "metric": "avg_death_age",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Средний возраст смерти",
+      "title": "Средний возраст смерти в зависимости от максимальной продолжительности жизни",
+      "output": "avg_death_age.png",
+      "tick_step": 50
+    },
+    {
+      "metric": ["avg_S", "avg_V", "avg_M", "avg_W", "avg_R", "avg_T0", "avg_IQ"],
+      "aggregate": ["mean"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Среднее значение параметра",
+      "title": "Динамика параметров в зависимости от максимальной продолжительности жизни",
+      "output": "parameters_dynamics.png",
+      "subplot": true,
+      "subplot_params": {
+        "rows": 4,
+        "cols": 2
+      },
+      "tick_step": 50
+    }
+  ]
+} 

@@ -1,0 +1,90 @@
+{
+  "group_by": {
+    "path": "cows.sexual_reproduce",
+    "column": "reproduction_mode",
+    "mapping": {
+      "0": "Бесполое",
+      "1": "Половое"
+    }
+  },
+  "experiment_groups": {
+    "group1": {
+      "name": "Весь мир",
+      "configs": [1, 2]
+    },
+    "group2": {
+      "name": "Полярная зона",
+      "configs": [3, 6]
+    },
+    "group3": {
+      "name": "Средняя зона",
+      "configs": [4, 7]
+    },
+    "group4": {
+      "name": "Экваториальная зона",
+      "configs": [5, 8]
+    }
+  },
+  "plots": [
+    {
+      "metric": "population_size",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Размер популяции",
+      "title": "Динамика популяции в зависимости от типа размножения",
+      "output": "population_dynamics_{group}.png",
+      "tick_step": 50,
+      "by_experiment_group": true
+    },
+    {
+      "metric": "avg_energy",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик", 
+      "ylabel": "Средняя энергия",
+      "title": "Средняя энергия коров в зависимости от типа размножения",
+      "output": "avg_energy_{group}.png",
+      "tick_step": 50,
+      "by_experiment_group": true
+    },
+    {
+      "metric": "births",
+      "aggregate": ["mean", "std"],
+      "type": "bar",
+      "use_summary": true,
+      "xlabel": "Тип размножения",
+      "ylabel": "Количество рождений",
+      "title": "Общее количество рождений в зависимости от типа размножения",
+      "output": "births_{group}.png",
+      "by_experiment_group": true
+    },
+    {
+      "metric": "genetic_diversity",
+      "aggregate": ["mean", "std"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Генетическое разнообразие",
+      "title": "Генетическое разнообразие в зависимости от типа размножения",
+      "output": "genetic_diversity_{group}.png",
+      "tick_step": 50,
+      "by_experiment_group": true
+    },
+    {
+      "metric": ["avg_S", "avg_V", "avg_M", "avg_W", "avg_R", "avg_T0", "avg_IQ"],
+      "aggregate": ["mean"],
+      "type": "line",
+      "xlabel": "Тик",
+      "ylabel": "Среднее значение параметра",
+      "title": "Динамика параметров в зависимости от типа размножения",
+      "output": "parameters_dynamics_{group}.png",
+      "subplot": true,
+      "subplot_params": {
+        "rows": 4,
+        "cols": 2
+      },
+      "tick_step": 50,
+      "by_experiment_group": true
+    }
+  ]
+} 

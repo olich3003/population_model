@@ -1,0 +1,20 @@
+[
+  {
+    "seed": 43,
+    "final_population": 1580,
+    "births": 261775,
+    "deaths": 260695,
+    "deaths_starvation": 255709,
+    "deaths_natural": 4986,
+    "ticks": 20000
+  },
+  {
+    "seed": 42,
+    "final_population": 1556,
+    "births": 264278,
+    "deaths": 263222,
+    "deaths_starvation": 257151,
+    "deaths_natural": 6071,
+    "ticks": 20000
+  }
+]

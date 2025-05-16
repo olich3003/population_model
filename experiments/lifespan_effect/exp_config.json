@@ -1,0 +1,25 @@
+{
+  "name": "lifespan_effect",
+  "description": "Влияние продолжительности жизни на структуру популяции",
+  "override": {
+    "simulation.repeats": 30,
+    "simulation.years": 50,
+    "cows.T0": [2, 4, 6, 8, 10],
+    "cows.mutation_rate": 0.2,
+    "cows.params": {
+      "S": "random",
+      "V": "random",
+      "M": "random",
+      "IQ": "random",
+      "W": "random",
+      "R": "random"
+    },
+    "cows.birth_energy": 500,
+    "cows.base_energy": 100,
+    "cows.use_intelligence": false,
+    "cows.stomach_size": 6,
+    "eco.grass_speed": 0.1,
+    "eco.max_grass_amount": 100,
+    "cows.sexual_reproduce": 0
+  }
+} 

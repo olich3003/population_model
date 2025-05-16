@@ -1,0 +1,23 @@
+{
+  "reproduction_comparison": {
+    "disable_csv_output": false
+  },
+  "climate_adaptation": {
+    "disable_csv_output": false
+  },
+  "mutation_rate": {
+    "disable_csv_output": false
+  },
+  "herding_behavior": {
+    "disable_csv_output": false
+  },
+  "intelligence_effect": {
+    "disable_csv_output": false
+  },
+  "lifespan_effect": {
+    "disable_csv_output": false
+  },
+  "random_test": {
+    "disable_csv_output": false
+  }
+}
